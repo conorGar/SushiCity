@@ -20,7 +20,8 @@ public class PlayerIdle : IActorState<PlayerState,PlayerTrigger>
         switch (trigger)
         {
             case PlayerTrigger.WALK:
-                animator.Play("Walk");
+                Debug.Log("Walk activated in PlayerIdle");
+                animator.SetBool("Walking", true);
                 return new PlayerWalk();
         }
 
